@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <script type="text/javascript" src="newfontsize/fontsize.js"></script>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+</head>
+<body>
+<div class="out">
+    <div>
+        <img src="images/z1_1.png" alt="" class="f-1">
+        <img src="images/z1_2.png" alt="" class="f-2">
+        <img src="images/z1_3.png" alt="" class="f-3">
+    </div>
+    <div class="down">
+        <img src="images/z2_1.png" alt="" class="t-1">
+        <img src="images/z2_3.png" alt="" class="t-2">
+        <img src="images/z2_2.png" alt="" class="t-3">
+        <img src="images/z2_4.png" alt="" class="t-4">
+        <img src="images/z2_5.png" alt="" class="tx-1">
+        <img src="images/z2_6.png" alt="" class="tx-2">
+        <img src="images/z2_7.png" alt="" class="tx-3">
+        <img src="images/z2_8.png" alt="" class="tx-4">
+        <img src="images/z2_9.png" alt="" class="tg-2">
+        <img src="images/z2_10.png" alt="" class="tg-3">
+        <img src="images/z2_11.png" alt="" class="tg-4">
+    </div>
+    <div class="down">
+        <img src="images/z3_1.png" alt="" class="three-1">
+        <img src="images/z3_2.png" alt="" class="three-2">
+        <img src="images/z3_3.png" alt="" class="three-3">
+    </div>
+    <div class="down">
+        <img src="images/z4_1.png" alt="" class="four-1">
+        <img src="images/z4_2.png" alt="" class="four-2">
+        <img src="images/z4_3.png" alt="" class="four-3">
+        <img src="images/z4_4.png" alt="" class="four-4">
+        <img src="images/z4_5.png" alt="" class="four-5">
+        <img src="images/z4_6.png" alt="" class="four-6">
+        <img src="images/z4_7.png" alt="" class="four-7">
+        <img src="images/z4_8.png" alt="" class="four-8">
+    </div>
+    <div class="down">
+        <img src="images/z5_1.png" alt="" class="fv-1">
+        <img src="images/z5_2.png" alt="" class="fv-2">
+        <img src="images/z5_3.png" alt="" class="fv-3">
+        <img src="images/z5_4.png" alt="" class="fv-4">
+        <img src="images/z5_5.png" alt="" class="fv-5">
+        <img src="images/z5_6.png" alt="" class="fv-6">
+        <img src="images/z5_7.png" alt="" class="fv-7">
+        <img src="images/z5_8.png" alt="" class="fv-8">
+    </div>
+    <div class="down">
+        <img src="images/z6_1.png" alt="" class="s-1">
+        <img src="images/z6_2.png" alt="" class="s-2">
+        <img src="images/z6_3.png" alt="" class="s-3">
+        <img src="images/z6_4.png" alt="" class="s-4">
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/touch.js"></script>
+<script>
+    var i=0;
+    $(".out>div").eq(0).siblings().children().addClass("yincang");
+    $(".out").swipeUp(function(){
+        if(i<5){
+            $(".out>div").eq(i).addClass("up");
+            $(".out>div").eq(i).children().addClass("yincang");
+            i++;
+            $(".out>div").eq(i).children().removeClass("yincang");
+            $(".out>div").eq(i).removeClass("down");
+        }
+    });
+    $(".out").swipeDown(function(){
+        if(i>0){
+            $(".out>div").eq(i).addClass("down");
+            $(".out>div").eq(i).children().addClass("yincang");
+            i--;
+            $(".out>div").eq(i).children().removeClass("yincang");
+            $(".out>div").eq(i).removeClass("up");
+
+        }
+    });
+</script>
+</html>
